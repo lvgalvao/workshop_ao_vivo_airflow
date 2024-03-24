@@ -17,11 +17,11 @@ def pipeline():
 
     @task
     def primeira_atividade():
-        return "minha primeira atividade! - Hello World"
+        return "ElyFlow nao precisa de XCOM"
 
     @task
     def segunda_atividade(response):
-        print("minha segunda atividade! - Hello World")
+        print(response)
         sleep(2)
     
     @task
