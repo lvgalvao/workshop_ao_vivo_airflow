@@ -11,7 +11,7 @@ from datetime import datetime
         description="minha etl braba",
         schedule="* * * * *",
         start_date=datetime(2023,3,24),
-        catchup=False #backfill
+        catchup=False #backfill,
 )
 def minha_setima_pipeline():
 
