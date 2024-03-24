@@ -6,7 +6,8 @@ authors = ["lvgalvaofilho <lvgalvaofilho@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.12"
+apache-airflow = "^2.8.3"
 
 
 [build-system]
