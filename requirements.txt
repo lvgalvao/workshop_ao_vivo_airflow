@@ -1,1 +1,5 @@
 # Astro Runtime includes the following pre-installed providers packages: https://docs.astronomer.io/astro/runtime-image-architecture#provider-packages
+
+requests==2.31.0
+python-dotenv==1.0.1
+pydantic==2.6.4
