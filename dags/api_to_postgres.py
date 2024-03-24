@@ -24,11 +24,16 @@ def api_postgres():
     @task(task_id='add_pokemon_to_db')
     def task_add_pokemon_to_db(pokemon_data):
         add_pokemon_to_db(pokemon_data)
+
+    @task
+    def print_de_sucesso(response):
+        print(response)
     
     t1 = task_gerar_numero_aleatorio()
     t2 = task_fetch_pokemon_data(t1)
     t3 = task_add_pokemon_to_db(t2)
+    t4 = print_de_sucesso(t3)
 
-    t1 >> t2 >> t3
+    t1 >> t2 >> t3 >> t4
 
 api_postgres()
