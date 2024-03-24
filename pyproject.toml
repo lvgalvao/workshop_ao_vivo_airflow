@@ -8,6 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
 apache-airflow = "^2.8.3"
+loguru = "^0.7.2"
+streamlit = "^1.32.2"
 
 
 [build-system]
