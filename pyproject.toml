@@ -13,6 +13,10 @@ streamlit = "^1.32.2"
 requests = "^2.31.0"
 python-dotenv = "^1.0.1"
 pydantic = "^2.6.4"
+apache-airflow-providers-postgres = "^5.10.2"
+astro-sdk-python = {extras = ["duckdb"], version = "^1.8.0"}
+airflow-provider-duckdb = "^0.2.0"
+duckdb = "^0.10.1"
 
 
 [build-system]
