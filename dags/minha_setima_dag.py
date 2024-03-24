@@ -1,6 +1,7 @@
 from time import sleep
 
 from airflow.decorators import dag, task
+from airflow.models.baseoperator import chain
 
 from datetime import datetime
 
@@ -16,11 +17,10 @@ def pipeline():
 
     @task
     def primeira_atividade():
-        print("minha primeira atividade! - Hello World")
-        sleep(2)
+        return "minha primeira atividade! - Hello World"
 
     @task
-    def segunda_atividade():
+    def segunda_atividade(response):
         print("minha segunda atividade! - Hello World")
         sleep(2)
     
@@ -34,10 +34,10 @@ def pipeline():
         print("pipeline finalizou")   
 
     t1 = primeira_atividade()
-    t2 = segunda_atividade()
+    t2 = segunda_atividade(t1)
     t3 = terceira_atividade()
     t4 = quarta_atividade()
 
-    t1 >> t2 >> t3 >> t4
+    chain(t1,t2,t3,t4)
 
 pipeline()
